@@ -1,0 +1,15 @@
+[application]
+name = "inpixly"
+
+[web.app]
+title = "Inpixly"
+
+[web.resource]
+style = ["assets/main.css"]
+script = ["https://cdn.tailwindcss.com"]
+
+[web.resource.dev]
+script = ["https://cdn.tailwindcss.com"]
+
+[[web.proxy]]
+backend = "http://localhost:3000/api"

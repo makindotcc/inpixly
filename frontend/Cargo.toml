@@ -1,0 +1,57 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+authors = ["makindotcc <9150636+makindotcc@users.noreply.github.com>"]
+edition = "2021"
+
+[dependencies]
+inpixly-shared = { path = "../shared" }
+dioxus = { version = "0.7.1", features = ["router"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+gloo-storage = "0.3"
+gloo-net = "0.6"
+gloo-timers = "0.3"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = [
+    "Window",
+    "Navigator",
+    "MediaDevices",
+    "MediaStream",
+    "MediaStreamTrack",
+    "MediaStreamConstraints",
+    "DisplayMediaStreamConstraints",
+    "RtcPeerConnection",
+    "RtcPeerConnectionIceEvent",
+    "RtcIceCandidate",
+    "RtcIceCandidateInit",
+    "RtcSessionDescription",
+    "RtcSessionDescriptionInit",
+    "RtcSdpType",
+    "RtcDataChannel",
+    "RtcDataChannelInit",
+    "RtcDataChannelEvent",
+    "RtcDataChannelState",
+    "RtcConfiguration",
+    "RtcTrackEvent",
+    "RtcRtpSender",
+    "MessageEvent",
+    "CloseEvent",
+    "WebSocket",
+    "HtmlVideoElement",
+    "Clipboard",
+    "Location",
+    "Document",
+    "Element",
+    "console",
+] }
+js-sys = "0.3"
+futures = "0.3"
+tracing = "0.1"
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
